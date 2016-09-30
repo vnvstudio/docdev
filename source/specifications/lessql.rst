@@ -1,4 +1,6 @@
-.. _specifications-lessql:
+LessQL
+======
+
 
 Introduction
 ------------
