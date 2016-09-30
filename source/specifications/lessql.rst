@@ -5,8 +5,8 @@ LessQL
 Introduction
 ------------
 
-Many databases
-==============
+Several database engines
+------------------------
 
 We want be able to use GLPI with databases:
 
@@ -19,13 +19,13 @@ To do that, we will use a lightweight ORM: LessQL (http://lessql.net/)
 
 
 Performances
-============
+------------
 
 To have better performances, we will do only simple queries (never use joins).
 
 
 Main changes in database
-========================
+------------------------
 
 The database structure must be changed:
 
@@ -40,7 +40,7 @@ The database structure must be changed:
 
 
 Use abstraction
-===============
+---------------
 
 In case we want use another ORM later, we will define an abstraction layer::
 
