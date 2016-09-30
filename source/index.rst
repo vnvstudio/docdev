@@ -12,3 +12,4 @@ GLPi Developer Documentation's documentation
    sourcecode
    codingstandards
    plugins
+   specifications
