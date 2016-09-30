@@ -51,7 +51,7 @@ with functions:
 
 * *table*: define the table to do query, so create the query
 * *select*: list of fields to select, so add select to the query (if this not called, will get all fields), id is always implicit, so not need ad it
-* *where*: first arg is the field, second is what to search (is string it's = 'your string', if array it's IN ('str', 'str')), thirt is '' or 'not
+* *where*: first arg is the field, second is what to search (if string it's = 'your string', if array it's IN ('str', 'str')), third is '' or 'not'
 * *orderby*: first arg is the field name, second 'ASC' or 'DESC'
 * *limit*: first arg is count, second the offset
 * *count*: get number of elements found
