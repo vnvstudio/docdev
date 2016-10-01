@@ -1,5 +1,5 @@
-LessQL
-======
+PDO
+===
 
 
 Introduction
@@ -14,7 +14,7 @@ We want be able to use GLPI with following databases:
 * Postgresql
 * SQLite
 
-To achieve that, we will use a lightweight ORM: `LessQL <http://lessql.net/>`_.
+To achieve that, we will use PDO. We have try some ORM but not have good performances.
 
 Performances
 ------------
@@ -26,9 +26,10 @@ Main changes in database
 
 The database structure must be changed:
 
-* table names from *plural* to *singular*
-* foreignkey from *plural* to *singular*
+* table names from *plural* to *singular* (more simple to manage)
+* foreignkey from *plural* to *singular* (more simple to manage)
 * all boolean like ``is_deleted`` must be in type *boolean* instead of *integer*
+* be sure we use integer and no string for numerical values
 * foreignkeys with action:
 
   * *update* => ``NO_ACTION``
@@ -37,11 +38,11 @@ The database structure must be changed:
 Use abstraction
 ---------------
 
-In case we want use another ORM later, we will define an abstraction layer::
+In case we want use another ORM later and to be more simple in GLPI/plugin code, we will define an abstraction layer::
 
      glpi code <-> abstraction class <-> use LessQL functions
 
-Create a class: ``CommonDB``
+Create a class: ``CommonDb``
 
 with functions:
 
